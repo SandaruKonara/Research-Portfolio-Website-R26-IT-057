@@ -4,7 +4,7 @@ export const project = {
   short: 'Safe Band',
   tagline:
     'Infrastructure-light, on-device machine learning for emergency detection, ambulance dispatch and ward monitoring in Sri Lanka',
-  projectId: 'XX-XX-XXX', // TODO: ඔබේ project ID එක
+  projectId: 'R26-IT-057', // TODO: ඔබේ project ID එක
   year: '2026',
   institute: 'Sri Lanka Institute of Information Technology (SLIIT)',
   abstract:
@@ -178,10 +178,10 @@ export const methodology = {
 
 export const technologies = [
   { group: 'Wearable & Mobile', items: ['Android smartwatch', 'Android companion app', 'Firebase Cloud Messaging (push alerts)'] },
-  { group: 'Cloud & Backend', items: ['Firebase Realtime Database', 'Node.js', 'Express.js', 'MongoDB Atlas'] },
+  { group: 'Cloud & Backend', items: ['Firebase Realtime Database', 'Node.js', 'Express.js', 'Firebase Firestore'] },
   { group: 'Machine Learning', items: ['LSTM (Keras / TensorFlow)', 'Random Forest', 'KNN + Haversine', 'Decision Tree', 'TensorFlow Lite'] },
-  { group: 'Web Dashboard', items: ['React (MERN stack)', 'Colour-coded triage view'] },
-  { group: 'Datasets', items: ['PhysioNet MIT-BIH Arrhythmia Database', 'PhysioNet MIMIC-III (proposed)', 'Ministry of Health hospital registry (57 hospitals)'] },
+  { group: 'Web Dashboard', items: ['React'] },
+  { group: 'Datasets', items: ['PhysioNet MIT-BIH Arrhythmia Database', 'PhysioNet MIMIC-III ', 'Ministry of Health hospital registry (57 hospitals)'] },
 ]
 
 export const results = {
@@ -199,13 +199,100 @@ export const results = {
 }
 
 /* ===================== MILESTONES ===================== */
-// TODO: date සහ marks ඔබේ course details අනුව වෙනස් කරන්න
+/* ===================== MILESTONES ===================== */
+// end = අවසාන දිනය (YYYY-MM-DD). ඒකෙන් Completed / Upcoming automatic තීරණය වෙනවා
 export const milestones = [
-  { id: 'proposal', name: 'Project Proposal', date: 'TBD', marks: 'TBD', details: 'Presentation of the research problem, objectives, literature survey and proposed methodology, with the project proposal document.' },
-  { id: 'pp1', name: 'Progress Presentation 1', date: 'TBD', marks: 'TBD', details: 'First progress review covering work completed so far and the remaining plan.' },
-  { id: 'pp2', name: 'Progress Presentation 2', date: 'TBD', marks: 'TBD', details: 'Second progress review demonstrating component implementation and preliminary results.' },
-  { id: 'final', name: 'Final Assessment', date: 'TBD', marks: 'TBD', details: 'Final research project presentation with the final report and evaluated results of all four components.' },
-  { id: 'viva', name: 'Website Viva', date: 'Same day as the final presentation', marks: 'TBD', details: 'Demonstration of this academic information website. The complete source code must be uploaded before the submission deadline.' },
+  {
+    id: 'proposal-sub',
+    date: '15 March 2026',
+    end: '2026-03-15',
+    name: 'Proposal Submission',
+    details: 'Submission of the project proposal document covering the research problem, objectives, literature survey and proposed methodology.',
+  },
+  {
+    id: 'proposal-pres',
+    date: '16 – 18 March 2026',
+    end: '2026-03-18',
+    name: 'Proposal Presentation',
+    details: 'Presentation of the research proposal to the evaluation panel, including the problem statement, research gap and planned approach for the four Safe Band components.',
+  },
+  {
+    id: 'pp1',
+    date: '11 – 13 May 2026',
+    end: '2026-05-13',
+    name: 'Progress Presentation 1',
+    details: 'First progress review covering the work completed so far, initial implementation and the remaining project plan.',
+  },
+  {
+    id: 'checklist',
+    date: '13 May 2026',
+    end: '2026-05-13',
+    name: 'Check List Submission',
+    details: 'Submission of the checklist document confirming the completed work and project requirements at the first progress stage.',
+  },
+  {
+    id: 'pp2',
+    date: '31 August – 2 September 2026',
+    end: '2026-09-02',
+    name: 'Progress Presentation 2',
+    details: 'Second progress review demonstrating component implementation, preliminary model results and integration with the Firebase backbone.',
+  },
+  {
+    id: 'draft-thesis',
+    date: '11 October 2026',
+    end: '2026-10-11',
+    name: 'Draft Thesis Submission',
+    details: 'Submission of the draft thesis for review and feedback before the final submission.',
+  },
+  {
+    id: 'website-sub',
+    date: '11 October 2026',
+    end: '2026-10-11',
+    name: 'Website Submission',
+    details: 'Upload of the complete academic information website source code before the submission deadline.',
+  },
+  {
+    id: 'final-checklist',
+    date: '14 October 2026',
+    end: '2026-10-14',
+    name: 'Final Check List Submission',
+    details: 'Submission of the final checklist confirming that all project deliverables are complete.',
+  },
+  {
+    id: 'final-viva',
+    date: '19 – 21 October 2026',
+    end: '2026-10-21',
+    name: 'Final Presentation and Viva',
+    details: 'Final research project presentation and viva, presenting the evaluated results of all four Safe Band components.',
+  },
+  {
+    id: 'website-eval',
+    date: '19 – 21 October 2026',
+    end: '2026-10-21',
+    name: 'Website Evaluation & Logbook Submission',
+    details: 'Website viva conducted on the same day as the final presentation, together with the logbook submission.',
+  },
+  {
+    id: 'paper-sub',
+    date: '23 October 2026',
+    end: '2026-10-23',
+    name: 'Research Paper Submission',
+    details: 'Submission of the research paper "Safe Band: Smart Wearable for Emergency Health Alerts and Monitoring in Sri Lanka".',
+  },
+  {
+    id: 'final-thesis',
+    date: '28 October 2026',
+    end: '2026-10-28',
+    name: 'Final Thesis Submission',
+    details: 'Submission of the final thesis document.',
+  },
+  {
+    id: 'paper-evidence',
+    date: '1 December 2026',
+    end: '2026-12-01',
+    name: 'Research Paper Publication Evidence Submission',
+    details: 'Submission of evidence of the research paper publication.',
+  },
 ]
 
 /* ===================== DOCUMENTS ===================== */

@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom'
 import { project, stats, components, methodology } from '../data/projectData'
+import heroBg from '../assets/hero-bg.jpg'
 
 export default function Home() {
   return (
     <>
-      <section className="hero">
-        <div className="container">
-          <span className="badge">Research Project {project.year} · SLIIT</span>
+      <section
+        className="hero"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        <div className="hero-overlay" />
+        <div className="container hero-content">
+          <span className="badge">Research Project : R26-IT-057  {project.year} · SLIIT</span>
           <h1>{project.title}</h1>
           <p className="hero-tag">{project.tagline}</p>
           <div className="hero-actions">
@@ -46,18 +51,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container block">
-        <h2 className="section-title">System Data Flow</h2>
-        <div className="flow">
-          {methodology.flow.map((f, i) => (
-            <div className="flow-item" key={f}>
-              <div className="flow-box">{f}</div>
-              {i < methodology.flow.length - 1 && <span className="flow-arrow">➜</span>}
-            </div>
-          ))}
-        </div>
-      </section>
-
+     
       <section className="container block">
         <h2 className="section-title">Explore</h2>
         <div className="grid grid-3">
