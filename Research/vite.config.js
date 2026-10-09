@@ -1,7 +1,8 @@
-import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// base: './' => course web server එකේ ඕනම folder එකක තිබුණත් වැඩ කරනවා
 export default defineConfig({
+  base: './',
   plugins: [react()],
 })
