@@ -23,5 +23,6 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_RESEARCH_PORTFOLIO_057 }}
+          channelId: live
           projectId: research-portfolio-057
           entryPoint: ./Research
